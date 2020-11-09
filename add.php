@@ -10,10 +10,10 @@ $title=$_POST['InterviewTitle'];
 $ListOfPeople=$_POST['ListOfPeople'];
 $start=$_POST['StartDateTime'];
 $end=$_POST['EndDateTime'];
-$query="Insert into test values('$name','$mail','$phn') ";
+$query="Insert into interview_schedule(InterviewTitle, ListOfPeople, StartTime, EndTime) values('$title','$ListOfPeople','$start','$end') ";
 $res=mysqli_query($con,$query);
 if(!$res)
-	echo 'Error';
+	echo 'Error '.mysqli_error($con);
 else
 	echo 'Done';
 
