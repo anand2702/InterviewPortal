@@ -1,10 +1,9 @@
 
 <?php
+include 'config.php';
 function delete($id){
 
 echo 'delete '.$id;
-$con=mysqli_connect("localhost","root","","interview");
-
 
 $query="Select ListOfPeople,StartTime,EndTime from interview_schedule where id='$id' ";
 $res=mysqli_query($con,$query);
@@ -32,11 +31,6 @@ else
 }
 }
 
-$con=mysqli_connect("localhost","root","","interview");
-if(!$con)
-{
-	die(mysqli_error());
-}
 $Id=$_GET['id'];
 delete($Id);
 echo $Id;

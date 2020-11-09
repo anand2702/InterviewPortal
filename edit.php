@@ -1,10 +1,6 @@
 <?php
 
-$con=mysqli_connect("localhost","root","","interview");
-if(!$con)
-{
-	die(mysqli_error());
-}
+include 'config.php';
 $id=$_GET['id'];
 $query = "SELECT * from interview_schedule where id='".$id."'"; 
 $result = mysqli_query($con, $query) or die ( mysqli_error());

@@ -10,11 +10,8 @@
 </tr>
 <?php
 
-$con=mysqli_connect("localhost","root","","interview");
-if(!$con)
-{
-	die(mysqli_error());
-}
+
+include 'config.php';
 $quer="Select * from interview_schedule";
 $res=mysqli_query($con,$quer);
 

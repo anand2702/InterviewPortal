@@ -1,4 +1,7 @@
 <?php
+
+
+include 'config.php';
 include 'validate.php';
 function delete($id){
 
@@ -64,10 +67,10 @@ if(!$res)
 	echo 'Error '.mysqli_error($con);
 else{
 	echo "<script><alert('Updated Successfully')</script>";
-	location('view.php');
+	
 }
 changetable($ListOfPeople,$start,$end);
-
+header("Location:mail.php?id=$id");
 }
 else
 {   $oldlist=$_POST['oldlist'];
