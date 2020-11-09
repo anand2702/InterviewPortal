@@ -143,43 +143,4 @@ return($f && $f2 );
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-$con=mysqli_connect("localhost","root","","interview");
-if(!$con)
-{
-	die(mysqli_error());
-}
-$title=$_POST['InterviewTitle'];
-$ListOfPeople=$_POST['ListOfPeople'];
-$start=$_POST['StartDateTime'];
-$end=$_POST['EndDateTime'];
-freetable();
-
-if(validate($ListOfPeople,$start,$end)){
-$query="Insert into interview_schedule(InterviewTitle, ListOfPeople, StartTime, EndTime) values('$title','$ListOfPeople','$start','$end') ";
-$res=mysqli_query($con,$query);
-if(!$res)
-	echo 'Error '.mysqli_error($con);
-else
-	echo 'Sucessfully Inserted';
-changetable($ListOfPeople,$start,$end);
-
-header("Location:view.php");
-}
-
-
-
-
-
-
-?>	
+?>
