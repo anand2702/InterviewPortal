@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2020 at 04:30 PM
+-- Generation Time: Nov 10, 2020 at 04:40 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -40,7 +40,15 @@ CREATE TABLE `interview_schedule` (
 --
 
 INSERT INTO `interview_schedule` (`id`, `InterviewTitle`, `ListOfPeople`, `StartTime`, `EndTime`) VALUES
-(1, 'Bhkds', 'kfbdsaj,gsadf,gsdaf', '2020-11-04 08:21:00', '2020-11-20 13:22:00');
+(2, 'Interview 1', 'anand.pandey2702@gmail.com,ankitself9e@gmail.com', '2020-11-13 22:30:00', '2020-11-09 12:30:00'),
+(60, 'Interview 8', 'anand.pandey2702@gmail.com,ankitself9e@gmail.com', '2020-11-30 06:54:00', '2020-12-10 01:54:00'),
+(61, 'Interview 10', 'anand.pandey2702@gmail.com,ana2702nd@gmail.com', '2021-01-20 03:15:00', '2021-02-10 03:15:00'),
+(62, 'Interview 10', 'anand.pandey2702@gmail.com,ana2702nd@gmail.com', '2021-01-20 03:16:00', '2021-02-10 03:15:00'),
+(63, 'Hello there', 'anand.pandey2702@gmail.com,ankitself9e@gmail.com', '2021-01-01 03:18:00', '2021-01-03 03:18:00'),
+(64, 'Hello there', 'anand.pandey2702@gmail.com,ankitself9e@gmail.com', '2021-01-01 03:18:00', '2021-01-03 03:18:00'),
+(65, 'Heyy', 'anand.pandey2702@gmail.com,ana2702nd@gmail.com', '2021-04-15 03:20:00', '2021-04-16 03:20:00'),
+(66, 'Heyy', 'anand.pandey2702@gmail.com,ana2702nd@gmail.com', '2021-04-15 03:20:00', '2021-04-16 03:20:00'),
+(67, 'TVD', 'anand.pandey2702@gmail.com,ana2702nd@gmail.com', '2021-06-24 03:23:00', '2021-06-25 03:23:00');
 
 -- --------------------------------------------------------
 
@@ -53,6 +61,43 @@ CREATE TABLE `user` (
   `name` varchar(255) NOT NULL,
   `Free_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`email`, `name`, `Free_at`) VALUES
+('akshaygautam@gmail.com', 'Akshay', NULL),
+('anand.pandey2702@gmail.com', 'Anand Kumar', NULL),
+('ankitself9e@gmail.com', 'Ankit Sharma', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_interview_details`
+--
+
+CREATE TABLE `user_interview_details` (
+  `email` varchar(255) NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_interview_details`
+--
+
+INSERT INTO `user_interview_details` (`email`, `start`, `end`) VALUES
+('anand.pandey2702@gmail.com', '2020-11-30 06:54:00', '2020-12-10 01:54:00'),
+('ankitself9e@gmail.com', '2020-11-30 06:54:00', '2020-12-10 01:54:00'),
+('anand.pandey2702@gmail.com', '2021-01-20 03:16:00', '2021-02-10 03:15:00'),
+('ana2702nd@gmail.com', '2021-01-20 03:16:00', '2021-02-10 03:15:00'),
+('anand.pandey2702@gmail.com', '2021-01-01 03:18:00', '2021-01-03 03:18:00'),
+('ankitself9e@gmail.com', '2021-01-01 03:18:00', '2021-01-03 03:18:00'),
+('anand.pandey2702@gmail.com', '2021-04-15 03:20:00', '2021-04-16 03:20:00'),
+('ana2702nd@gmail.com', '2021-04-15 03:20:00', '2021-04-16 03:20:00'),
+('anand.pandey2702@gmail.com', '2021-06-24 03:23:00', '2021-06-25 03:23:00'),
+('ana2702nd@gmail.com', '2021-06-24 03:23:00', '2021-06-25 03:23:00');
 
 --
 -- Indexes for dumped tables
@@ -78,7 +123,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `interview_schedule`
 --
 ALTER TABLE `interview_schedule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

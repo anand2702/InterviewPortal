@@ -28,16 +28,16 @@ required value="<?php echo $row['ListOfPeople'];?>" /></p>
 
 Old Starting time:
 <p><input type="text" name="oldst" 
-required value="<?php echo $row['StartTime'];?>" /></p>
+required value="<?php echo $row['StartTime'];?>" readonly /></p>
 
 
 Starting time:
 <p><input type="text" name="StartTime" 
-required value="<?php echo $row['StartTime'];?>" /></p>
+required value="<?php echo $row['StartTime'];?>"  /></p>
 
 Old Ending Time:
 <p><input type="text" name="oldend" 
-required value="<?php echo $row['EndTime'];?>" /></p>
+required value="<?php echo $row['EndTime'];?>" readonly/></p>
 
 
 Ending Time:
